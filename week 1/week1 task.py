@@ -70,22 +70,25 @@ h_sober=convolution(blured_image,h_sober_kernel)
 robert_1=convolution(blured_image,robert_kernel_1)
 robert_2=convolution(blured_image,robert_kernel_2)
 
-plt.figure(figsize=(21,7))
-plt.subplot(1,3,1)
+plt.figure(figsize=(28,7))
+plt.subplot(1,4,1)
 plt.imshow(image, cmap='gray')
 plt.title('original')
 
-plt.subplot(1,3,2)
+plt.subplot(1,4,2)
 plt.imshow((r_edge_image**2 + l_edge_image**2 + t_edge_image**2 + b_edge_image**2)**(0.5), cmap='gray')
 plt.title('edge detect with reLU')
 
-plt.subplot(1,3,3)
+plt.subplot(1,4,3)
 plt.imshow((v_sober**2 + h_sober**2)**(0.5), cmap='gray')
 plt.title('edge detect with sober operator')
 
+plt.subplot(1,4,4)
+plt.imshow((robert_1**2 + robert_2**2)**(0.5), cmap='gray')
+plt.title('edge detect with Robert cross')
+
+
 plt.show()
-
-
 
 
 

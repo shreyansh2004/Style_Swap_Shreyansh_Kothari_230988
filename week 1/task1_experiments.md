@@ -25,4 +25,4 @@ used 2 type of combination techniques
 1) sqrt((Gx)^2^ +(Gy)^2^)-(worked prety good)
 2) average of all terms(does not worked properly)
 
-![final result](Figure_1.png)
+![final result](final.png)
